@@ -1,0 +1,47 @@
+/* @import url(//db.onlinewebfonts.com/c/1db29588408eadbd4406aae9238555eb?family=Consolas); */
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;    
+}
+.wavy
+{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+    /* -webkit-box-reflect: below; */
+    /* -webkit-box-reflect: below; */
+}
+.wavy span
+{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0px);       
+    }
+    20%
+    {
+        transform: translateY(-20px);       
+    }
+    40%,100%
+    {
+        transform: translateY(0px);
+    }
+}
